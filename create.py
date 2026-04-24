@@ -6,7 +6,7 @@ actions=""
 def generatedcomment(funca,buttonte):
 	tokensb=buttonte.split()
 	predicteddo="Generated predictive comment: "
-	if "go" in tokensb or "to" in tokens or "go" in funca:
+	if "go" in tokensb or "to" in tokensb or "go" in funca:
 		predicteddo+=f"goes to the location {funca[funca.find("'"):(funca[funca.find("'")+1:funca.rfind("'")]).find("'")]}"
 	return predicteddo
 while a!="exit":
