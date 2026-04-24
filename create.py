@@ -7,7 +7,7 @@ def generatedcomment(funca,buttonte):
 	tokensb=split(buttonte)
 	predicteddo="Generated predictive comment: "
 	if "go" in tokensb and "to" in tokens and "go" in funca:
-		predicteddo+="goes to the location {funca[funca.find("'"):(funca[funca.find("'")+1:funca.rfind("'")]).rfind("'")]}"
+		predicteddo+=f"goes to the location {funca[funca.find("'"):(funca[funca.find("'")+1:funca.rfind("'")]).rfind("'")]}"
 	return predicteddo
 while a!="exit":
 	a=input("where to go? ")
