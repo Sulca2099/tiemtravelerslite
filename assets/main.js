@@ -1,5 +1,12 @@
-
+function startsessionstorage(){
+  sessionStorage.setItem("health",100);
+}
 function justgo(urlfor){//function to go to another room
+  window.location.href=urlfor;//change the url to the room
+}
+function justgo(urlfor){//function to go to another room
+  sessionStorage.clear();
+  startsessionstorage();
   window.location.href=urlfor;//change the url to the room
 }
 function gowith(){}//function for going to room, but it requires something to execute
