@@ -17,7 +17,7 @@ function justtalk(){}//function to make a popup for the converstions
 function claim(item,amount,location){
   if(sessionStorage.getItem(location)==null){
     sessionStorage.setItem(item,sessionStorage.getItem(item)+amount);
-    sessionStorage.getItem(location)="true";
+    sessionStorage.setItem(location,"true");
   } else{
     alert("you took this item already, find something else...");
   }
