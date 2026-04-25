@@ -10,7 +10,7 @@ function justgo(urlfor){//function to go to another room
   window.location.href=urlfor;//change the url to the room
 }
 function randomgo(locations){
-  window.location.href=locations[(Math.floor(Math.random()*locations.length)/1)-1];
+  window.location.href=locations[(Math.floor(Math.random()*locations.length)/1)];
 }
 function gowith(){}//function for going to room, but it requires something to execute
 function justtalk(){}//function to make a popup for the converstions
