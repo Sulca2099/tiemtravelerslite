@@ -16,7 +16,7 @@ function gowith(page,stats){
   if(stats[1]==sessionStorage.getItem(stats[0])){
     window.location.href=page;
   } else{
-    alert(`you don't have enough ${stats[1]}`);
+    alert(`you don't have enough ${stats[0]}`);
   }
 }//function for going to room, but it requires something to execute
 function justtalk(){}//function to make a popup for the converstions
