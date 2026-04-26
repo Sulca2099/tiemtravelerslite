@@ -12,7 +12,13 @@ function resetgo(urlfor){//function to go to another room
 function randomgo(locations){
   window.location.href=locations[(Math.floor(Math.random()*locations.length)/1)];
 }
-function gowith(){}//function for going to room, but it requires something to execute
+function gowith(page,stats){
+  if(stats[1]==sessionStorage.getItem(stats[0])){
+    window.location.href=page;
+  } else{
+    alert(`you don't have enough ${stats[1]}`);
+  }
+}//function for going to room, but it requires something to execute
 function justtalk(){}//function to make a popup for the converstions
 function claim(item,amount,location){
   if(sessionStorage.getItem(location)==null){
