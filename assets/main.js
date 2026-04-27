@@ -4,10 +4,7 @@ function startsessionstorage(){
 window.onload= function(){
   document.getElementById('stats').innerText=`health ${sessionStorage.getItem("health")}`;
 }
-function justgo(urlfor){//function to go to another room
-  window.location.href=urlfor;//change the url to the room
-  
-}
+
 function resetgo(urlfor){//function to go to another room
   sessionStorage.clear();
   startsessionstorage();
@@ -40,4 +37,9 @@ function unclaim(item,amount,location){
       window.location.href="dead.html";
     }
   } 
+}
+function justgo(urlfor){//function to go to another room
+  sessionStorage.setItem(item,sessionStorage.getItem("health")+.1);
+  window.location.href=urlfor;//change the url to the room
+  
 }
