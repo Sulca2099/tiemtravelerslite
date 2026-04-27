@@ -34,7 +34,7 @@ function claim(item,amount,location){
 }
 function unclaim(item,amount,location){
   if(sessionStorage.getItem(location)==null){
-    sessionStorage.setItem(item,sessionStorage.getItem(item-amount);
+    sessionStorage.setItem(item,sessionStorage.getItem(item)-amount);
     sessionStorage.setItem(location,"true");
     if(sessionStorage.getItem("health")<=0){
       window.location.href="dead.html";
