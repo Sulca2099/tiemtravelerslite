@@ -28,3 +28,11 @@ function claim(item,amount,location){
     alert("you took this item already, find something else...");
   }
 }
+function unclaim(item,amount,location){
+  if(sessionStorage.getItem(location)==null){
+    sessionStorage.setItem(item,sessionStorage.getItem(item-+amount);
+    sessionStorage.setItem(location,"true");
+  } else{
+    alert("you took this item already, find something else...");
+  }
+}
