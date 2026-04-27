@@ -2,6 +2,7 @@ function startsessionstorage(){
   sessionStorage.setItem("health",100);
 }
 window.onload= function(){
+  sessionStorage.setItem("health", parseInt(sessionStorage.setItem("health"))+.1);
   document.getElementById('stats').innerText=`health ${sessionStorage.getItem("health")}`;
 }
 
@@ -14,7 +15,7 @@ function randomgo(locations){
   window.location.href=locations[(Math.floor(Math.random()*locations.length)/1)];
 }
 function gowith(page,stats){
-  if(stats[1]==sessionStorage.getItem(stats[0])){
+  if(stats[1]>=parseInt(sessionStorage.getItem(stats[0]))){
     window.location.href=page;
   } else{
     alert(`you don't have enough ${stats[0]}`);
@@ -23,7 +24,7 @@ function gowith(page,stats){
 function justtalk(){}//function to make a popup for the converstions
 function claim(item,amount,location){
   if(sessionStorage.getItem(location+item)==null){
-    sessionStorage.setItem(item,sessionStorage.getItem(item)+amount);
+    sessionStorage.setItem(item,parseInt(sessionStorage.getItem(item))+amount);
     sessionStorage.setItem(location+item,"true");
   } else{
     alert("you took this item already, find something else...");
@@ -31,15 +32,14 @@ function claim(item,amount,location){
 }
 function unclaim(item,amount,location){
   if(sessionStorage.getItem(location+item)==null){
-    sessionStorage.setItem(item,sessionStorage.getItem(item)-amount);
+    sessionStorage.setItem(item,parseInt(sessionStorage.getItem(item))-amount);
     sessionStorage.setItem(location+item,"true");
-    if(sessionStorage.getItem("health")<=0){
+    if(parseInt(sessionStorage.getItem("health"))<=0){
       window.location.href="dead.html";
     }
   } 
 }
 function justgo(urlfor){//function to go to another room
-  sessionStorage.setItem("health",sessionStorage.getItem("health")+.1);
   window.location.href=urlfor;//change the url to the room
   
 }
