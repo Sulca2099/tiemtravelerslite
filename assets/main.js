@@ -2,7 +2,7 @@ function startsessionstorage(){
   sessionStorage.setItem("health",100);
 }
 window.onload= function(){
-  sessionStorage.setItem("health", parseInt(sessionStorage.setItem("health"))+.1);
+  sessionStorage.setItem("health", parseInt(sessionStorage.getItem("health"))+.1);
   document.getElementById('stats').innerText=`health ${sessionStorage.getItem("health")}`;
 }
 
