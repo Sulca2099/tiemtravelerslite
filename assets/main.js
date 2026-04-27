@@ -22,17 +22,17 @@ function gowith(page,stats){
 }//function for going to room, but it requires something to execute
 function justtalk(){}//function to make a popup for the converstions
 function claim(item,amount,location){
-  if(sessionStorage.getItem(location)==null){
+  if(sessionStorage.getItem(location+item)==null){
     sessionStorage.setItem(item,sessionStorage.getItem(item)+amount);
-    sessionStorage.setItem(location,"true");
+    sessionStorage.setItem(location+item,"true");
   } else{
     alert("you took this item already, find something else...");
   }
 }
 function unclaim(item,amount,location){
-  if(sessionStorage.getItem(location)==null){
+  if(sessionStorage.getItem(location+item)==null){
     sessionStorage.setItem(item,sessionStorage.getItem(item)-amount);
-    sessionStorage.setItem(location,"true");
+    sessionStorage.setItem(location+item,"true");
     if(sessionStorage.getItem("health")<=0){
       window.location.href="dead.html";
     }
