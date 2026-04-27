@@ -39,7 +39,7 @@ function unclaim(item,amount,location){
   } 
 }
 function justgo(urlfor){//function to go to another room
-  sessionStorage.setItem(item,sessionStorage.getItem("health")+.1);
+  sessionStorage.setItem("health",sessionStorage.getItem("health")+.1);
   window.location.href=urlfor;//change the url to the room
   
 }
