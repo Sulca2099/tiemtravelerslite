@@ -1,8 +1,12 @@
 function startsessionstorage(){
   sessionStorage.setItem("health",100);
 }
+window.onload= function(){
+  document.getElementById('stats').innerText=`${sessionStorage.getItem("health")}`;
+}
 function justgo(urlfor){//function to go to another room
   window.location.href=urlfor;//change the url to the room
+  
 }
 function resetgo(urlfor){//function to go to another room
   sessionStorage.clear();
