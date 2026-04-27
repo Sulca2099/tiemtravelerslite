@@ -35,7 +35,5 @@ function unclaim(item,amount,location){
     if(sessionStorage.getItem("health")<=0){
       window.location.href="dead.html";
     }
-  } else{
-    alert("you took this item already, find something else...");
-  }
+  } 
 }
