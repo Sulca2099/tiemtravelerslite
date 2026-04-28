@@ -44,8 +44,11 @@ function justgo(urlfor){//function to go to another room
   
 }
 function pay(){
-			if(sessionStorage.getItem('star')==1 && sessionStorage.getItem('rod')==1){
-				document.getElementById("maintext").innerText+="'ahh yes, exactly what I am looking for' says the man. Heres your gold.";
-				claim('money',150,'upstairs1');
-			}
+	if(sessionStorage.getItem('star')==1 && sessionStorage.getItem('rod')==1){
+		document.getElementById("maintext").innerText+="'ahh yes, exactly what I am looking for' says the man. Heres your gold.";
+		claim('money',150,'upstairs1');
+	}
+}
+function ucl(){
+	sessionStorage.setItem('money',parseInt(sessionStorage.getItem('money'))-80);
 }
